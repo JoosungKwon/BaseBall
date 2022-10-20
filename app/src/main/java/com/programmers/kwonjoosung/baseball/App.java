@@ -1,19 +1,16 @@
 package com.programmers.kwonjoosung.baseball;
 
-import com.programmers.kwonjoosung.baseball.controller.BaseBall;
-import com.programmers.kwonjoosung.baseball.io.Console;
-import com.programmers.kwonjoosung.baseball.utils.Calculator;
-import com.programmers.kwonjoosung.baseball.utils.FakeNumberGenerator;
-import com.programmers.kwonjoosung.baseball.utils.NumberGenerator;
-import com.programmers.kwonjoosung.baseball.utils.Parser;
+import com.programmers.kwonjoosung.baseball.controller.*;
+import com.programmers.kwonjoosung.baseball.io.*;
+import com.programmers.kwonjoosung.baseball.utils.*;
 
 public class App {
     public static void main(String[] args) {
         Console console = new Console();
         NumberGenerator numberGenerate = new FakeNumberGenerator();
-        Calculator calculator = new Calculator();
+        Calculator calculator = new BallCountCalculator();
         Parser parser = new Parser();
-
-        new BaseBall(console,console,numberGenerate,parser,calculator).run();
+        // 빌더 패턴으로 구현하는게..?
+        new GameController(console,console,numberGenerate,parser,calculator).run();
     }
 }
