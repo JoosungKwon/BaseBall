@@ -1,4 +1,7 @@
 package com.programmers.kwonjoosung.baseball.utils;
 
-public class Calculator {
+import com.programmers.kwonjoosung.baseball.model.BallCount;
+
+public interface Calculator {
+    BallCount calculate(String[] data,String[] answer);
 }
