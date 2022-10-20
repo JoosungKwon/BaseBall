@@ -6,14 +6,13 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class BallCount {
-    int Strike;
-    int Ball;
-
+    int strike;
+    int ball;
     @Override
     public String toString() {
-        return "현재 BallCount는" +
-                Strike + " Strike, " +
-                Ball + "Ball " +
+        return "현재 BallCount는 " +
+                strike + "Strike, " +
+                ball + "Ball" +
                 "입니다.";
     }
 }
